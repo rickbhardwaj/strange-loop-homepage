@@ -254,6 +254,28 @@
             font-size: .9rem
         }
 
+        /* Button styled like footer */
+        .work-with-us-btn {
+            background: #111;
+            color: #fff;
+            border: none;
+            padding: 22px 40px;
+            font-size: .9rem;
+            border-radius: 0;
+            text-align: center;
+            cursor: pointer;
+            font-family: inherit;
+            margin: 0 auto;
+            display: block;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .work-with-us-btn:hover,
+        .work-with-us-btn:focus {
+            background: #222;
+            color: #fff;
+        }
+
         /* Anchors spacing for sticky header */
         .anchor {
             position: relative;
@@ -283,12 +305,7 @@
                 </svg>
                 <span>Strange Loop Labs</span>
             </a>
-            <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="nav" id="nav-menu">
+            <div class="nav">
                 <a href="#security">Platform</a>
                 <a href="#security">Security</a>
                 <a href="#company">Company</a>
@@ -423,17 +440,19 @@
                 ingests the Excel workbooks, Altyrex workflows, datasets, and other process artifacts your experts
                 already use—transforming
                 them into AI systems without disrupting how they work today.</p>
+
+            <p><strong>This is a new kind of software company.</strong> In fact, we believe this model will power the
+                most valuable company on the planet.</p>
         </section>
 
         <!-- Company section target -->
         <span id="company" class="anchor"></span>
         <section>
-            <p><strong>Want to work with us?</strong> Start with a pilot process. 45‑minute session with an engineer—no
-                slideware.</p>
+            <button type="button" class="work-with-us-btn">Get Started</button>
         </section>
     </main>
 
-    <footer>&copy; 2025 Strange Loop Labs. All rights reserved.</footer>
+    <footer>&copy; 2025 Guru Movement Labs. All rights reserved.</footer>
 </body>
 
 </html>
