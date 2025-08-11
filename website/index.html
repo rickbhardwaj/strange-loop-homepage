@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Strange Loop Labs — Manifesto</title>
+    <meta name="description"
+        content="Strange Loop Labs builds custom AI automation for complex, expert-driven processes inside the enterprise." />
+    <style>
+        :root {
+            --fg: #111;
+            --muted: #555;
+            --line: #e9e9e9;
+            --bg: #fff;
+            --accent: #0a0a0a;
+            --soft: #f7f7f7;
+            --max: 980px
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--bg);
+            color: var(--fg);
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif;
+            line-height: 1.6
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        /* Header */
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #fff;
+            border-bottom: 1px solid var(--line)
+        }
+
+        .topbar .inner {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700
+        }
+
+        .brand svg {
+            width: 26px;
+            height: 26px
+        }
+
+        .nav a {
+            margin-left: 20px;
+            font-size: .95rem
+        }
+
+        /* Hero */
+        .hero {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 56px 20px 20px
+        }
+
+        .kicker {
+            color: var(--muted);
+            font-size: .9rem;
+            letter-spacing: .06em;
+            text-transform: uppercase
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            line-height: 1.2;
+            margin: .3rem 0 1rem
+        }
+
+        .lead {
+            font-size: 1.15rem;
+            color: #222
+        }
+
+        /* Cred strip */
+        .cred {
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            background: #fff
+        }
+
+        .cred .inner {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .cred .badges {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            color: var(--muted);
+            font-size: .9rem
+        }
+
+        .logo-pill {
+            padding: 6px 10px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            color: #333;
+            background: #fafafa;
+            font-size: .85rem
+        }
+
+        /* Three-up summary */
+        .summary {
+            max-width: var(--max);
+            margin: 32px auto 0;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px
+        }
+
+        .card {
+            border: 1px solid var(--line);
+            padding: 16px;
+            border-radius: 10px;
+            background: #fff
+        }
+
+        .card h4 {
+            margin: 0 0 .4rem;
+            font-size: 1rem
+        }
+
+        .card p {
+            margin: 0;
+            color: #222;
+            font-size: .98rem
+        }
+
+        /* Sections */
+        main {
+            max-width: var(--max);
+            margin: 0 auto;
+            /* padding: 36px 20px 80px */
+            padding: 20px 20px 80px
+                /* Reduced from 36px to 20px */
+        }
+
+        section {
+            margin: 56px 0
+        }
+
+        h2 {
+            font-size: 1.9rem;
+            margin: 0 0 .6rem
+        }
+
+        .muted {
+            color: var(--muted)
+        }
+
+        /* Case study */
+        .case {
+            background: var(--soft);
+            border-left: 4px solid var(--accent);
+            padding: 20px
+        }
+
+        blockquote {
+            margin: 14px 0 0;
+            padding-left: 14px;
+            border-left: 3px solid var(--accent);
+            font-style: italic
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            gap: 12px;
+            justify-content: space-between;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 12px
+        }
+
+        .stat {
+            flex: 1;
+            text-align: center
+        }
+
+        .stat b {
+            display: block;
+            font-size: 1.6rem
+        }
+
+        /* Diagram */
+        .diagram {
+            background: #f4f4f4;
+            border: 1px dashed #d9d9d9;
+            border-radius: 10px;
+            padding: 14px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: .92rem
+        }
+
+        /* Footer band */
+        .band {
+            background: #fafafa;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .band .inner {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 16px 20px;
+            color: var(--muted);
+            font-size: .92rem
+        }
+
+        footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 22px;
+            font-size: .9rem
+        }
+
+        /* Anchors spacing for sticky header */
+        .anchor {
+            position: relative;
+            top: -72px
+        }
+
+        /* Responsive */
+        @media (max-width:880px) {
+            .summary {
+                grid-template-columns: 1fr
+            }
+
+            h1 {
+                font-size: 2rem
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sticky header with logo + links -->
+    <nav class="topbar">
+        <div class="inner">
+            <a class="brand" href="#top" aria-label="Strange Loop Labs">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" fill="#111" />
+                </svg>
+                <span>Strange Loop Labs</span>
+            </a>
+            <div class="nav">
+                <a href="#security">Security</a>
+                <a href="#company">Company</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="top">
+        <h1>We automate critical business processes with AI.</h1>
+        <p class="lead"><strong>Strange Loop Labs</strong> is an applied AI company founded by engineers from Amazon
+            Alexa, AWS, and other leading AI & data organizations.
+        </p>
+
+        <p class="lead">
+            We partner with Fortune 500s and global firms to automate complex, expert‑driven processes involving
+            unstructured data and legacy software -— starting with one
+            critical workflow, then scaling across the organization.
+        </p>
+    </header>
+
+    <!-- Credibility strip with badges/logos -->
+    <div class="cred">
+        <div class="inner">
+            <span class="logo-pill">Unstructured Data</span>
+            <span class="logo-pill">Legacy Tools</span>
+            <span class="logo-pill">Expert Knowledge</span>
+        </div>
+    </div>
+
+    <main>
+        <!-- PwC Case Study -->
+        <section class="case">
+            <h2>Case Study: PwC</h2>
+            <p>PwC’s tax teams process some of the most complex financial data on earth—millions of state K‑1 forms
+                containing unstructured tables, handwritten notes, and idiosyncratic state‑specific rules. Traditional
+                automation and off‑the‑shelf AI tools failed here. The work required deep accounting expertise,
+                legacy‑system integration, and rapid iteration across dozens of edge cases.</p>
+            <p>We embedded our engineers directly alongside PwC’s team. Over the course of weeks, we built and deployed
+                AI agents tailored to their exact process. The agents run invisibly in the background, surfacing only
+                when human input is essential, and pushing final results into the systems PwC accountants already use.
+            </p>
+            <blockquote>“Strange Loop produced a rapid AI win in our key strategic area. This is one of the only
+                successful AI agent deployments we’ve seen in tax.”</blockquote>
+            <section>
+                <div class="stats">
+                    <div class="stat"><b>$11M</b> savings in outsourced labor</div>
+                    <div class="stat"><b>Weeks</b> to first deployment</div>
+                    <div class="stat"><b>0</b> new tools for end users</div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Largest Impact / Doing it Right -->
+        <section>
+            <h2>88% of AI Pilots Fail.</h2>
+            <h2>Here’s How We Build AI That Works in the Real World.</h2>
+            <p><strong>Customers need outcomes, not tools.</strong> AI agents should run in the background, tuned to
+                your process, and appear only when needed—inside the tools your teams already use.</p>
+            <p><strong>Engineers should deliver the outcome.</strong> Great AI solutions require great AI engineers
+                armed with great AI tooling working side by side with experts to build a deep understanding of the
+                problem. We don’t rely on CSMs or system integrators. </p>
+            <p><strong>These outcomes can be delivered in weeks, not months.</strong> Our tooling
+                ingests the Excel workbooks, Altyrex workflows, datasets, and other process artifacts your experts
+                already use—transforming
+                them into AI systems without disrupting how they work today.</p>
+        </section>
+
+        <!-- Company section target -->
+        <span id="company" class="anchor"></span>
+        <section>
+            <p><strong>Want to work with us?</strong> Start with a pilot process. 45‑minute session with an engineer—no
+                slideware.</p>
+        </section>
+    </main>
+
+    <footer>&copy; 2025 Strange Loop Labs. All rights reserved.</footer>
+</body>
+
+</html>
