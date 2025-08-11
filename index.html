@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Strange Loop Labs — Manifesto</title>
+    <title>Strange Loop Labs</title>
     <meta name="description"
         content="Strange Loop Labs builds custom AI automation for complex, expert-driven processes inside the enterprise." />
     <style>
@@ -283,11 +283,84 @@
                 </svg>
                 <span>Strange Loop Labs</span>
             </a>
-            <div class="nav">
+            <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav" id="nav-menu">
                 <a href="#security">Platform</a>
                 <a href="#security">Security</a>
                 <a href="#company">Company</a>
             </div>
+            <script>
+                // Hamburger menu toggle
+                const hamburger = document.querySelector('.hamburger');
+                const navMenu = document.getElementById('nav-menu');
+                hamburger.addEventListener('click', function () {
+                    const expanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !expanded);
+                    navMenu.classList.toggle('open');
+                });
+            </script>
+            <style>
+                .hamburger {
+                    display: none;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 36px;
+                    height: 36px;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    padding: 0;
+                    margin-left: 20px;
+                }
+
+                .hamburger span {
+                    display: block;
+                    height: 3px;
+                    width: 100%;
+                    background: #111;
+                    margin: 5px 0;
+                    border-radius: 2px;
+                    transition: 0.3s;
+                }
+
+                @media (max-width: 700px) {
+                    .nav {
+                        position: absolute;
+                        top: 60px;
+                        right: 20px;
+                        background: #fff;
+                        border: 1px solid var(--line);
+                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+                        display: none;
+                        flex-direction: column;
+                        min-width: 160px;
+                        z-index: 1001;
+                    }
+
+                    .nav.open {
+                        display: flex;
+                    }
+
+                    .nav a {
+                        margin: 0;
+                        padding: 14px 20px;
+                        border-bottom: 1px solid var(--line);
+                        font-size: 1rem;
+                    }
+
+                    .nav a:last-child {
+                        border-bottom: none;
+                    }
+
+                    .hamburger {
+                        display: flex;
+                    }
+                }
+            </style>
         </div>
     </nav>
 
@@ -300,7 +373,7 @@
 
         <p class="lead">
             We partner with Fortune 500s and global firms to automate complex, expert‑driven processes involving
-            unstructured data and legacy software -— starting with one
+            unstructured data and legacy software -- starting with one
             critical workflow, then scaling across the organization.
         </p>
     </header>
@@ -340,7 +413,8 @@
         <!-- Largest Impact / Doing it Right -->
         <section>
             <h2>Our Principles</h2>
-            <p><strong>Customers need outcomes, not tools.</strong> AI agents should run in the background, tuned to
+            <p><strong>Customers need outcomes, not more tools.</strong> AI agents should run in the background, tuned
+                to
                 your process, and appear only when needed—inside the tools your teams already use.</p>
             <p><strong>Engineers should deliver the outcome.</strong> Great AI solutions require great AI engineers
                 armed with great AI tooling working side by side with experts to build a deep understanding of the
