@@ -281,6 +281,38 @@
             top: -72px
         }
 
+        /* Logo strip */
+        .logo-strip {
+            background: #fafafa;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            padding: 24px 20px;
+            margin: 32px 0;
+        }
+
+        .logo-strip-inner {
+            max-width: var(--max);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .logo-strip img {
+            height: 40px;
+            width: auto;
+            opacity: 0.7;
+            filter: grayscale(100%);
+            transition: opacity 0.3s, filter 0.3s;
+        }
+
+        .logo-strip img:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+
         /* Responsive */
         @media (max-width:880px) {
             .summary {
@@ -390,11 +422,28 @@
     </nav>
 
     <header class="hero" id="top">
-        <h1>We automate critical business processes with AI.</h1> 
+        <h1>We automate critical business processes with AI.</h1>  
         <p class="lead">
-            <strong>Strange Loop Labs</strong> partners with leading firms to turn <strong>unstructured data</strong>, <strong>complex documents</strong>, and <strong>expert knowledge</strong> into actionable outputs -- faster and more accurately than humans.
-        </h3>
+            <strong><a href="https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/" target="_blank" rel="noopener">95% of AI pilots fail.</a></strong> We are AI engineers from leading ML organizations like Amazon Alexa, AWS, Lyft, and Elastic with a different approach to enterprise AI transformation.
+        </p>
+        <p class="lead">
+            <strong>Partnerships to deliver outcomes, not tools: </strong> We start with one critical workflow, embed our team with your experts, and deploy a solution in <strong>weeks, not months</strong>, obsessing over every point of accuracy. Then we scale across the organization.
+        </p>
+        <p class="lead">
+            <strong>Powered by a flexible AI platform: </strong>  The Strange Loop Platform enables us to quickly build complex AI automations that work with the tools and data you already use.
+        </p>
+    <div class="logo-strip">
+        <div class="logo-strip-inner">
+            <img src="images/addepar.png" alt="Addepar" />
+            <img src="images/alteryx.png" alt="Alteryx" />
+            <img src="images/excel.png" alt="Excel" />
+            <img src="images/outlook.png" alt="Outlook" />
+            <img src="images/pdg.png" alt="PDG" />
+            <img src="images/sap.png" alt="SAP" />
+        </div>
+    </div>
     </header>
+
 
     <main>
         <section class="case" style="margin-top: 8px; margin-bottom: 32px;">
@@ -415,32 +464,6 @@ We embedded our engineers with PwC, rapidly building AI agents tailored to their
                 </div>
             </div>
         </section>
-
-        <h2>Our Approach: Outcomes, Not Tools</h2>
-        <p>
-            <a href="https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/" target="_blank" rel="noopener">
-                95% of AI pilots fail
-            </a>
-            because enterprises are sold <strong>tools instead of <em>outcomes</em></strong>. We deliver the outcome through two principles
-        </p>
-        <p class="lead">
-            <strong>Partnerships that embed AI engineers with your experts</strong> 
-        </p>
-        <p>
-            We start with one critical workflow and deploy a solution in <strong>weeks, not months,</strong> then scale across the organization. We sit with your experts, observe and correct AI failures, and obsess over every point of accuracy. 
-        </p>
-        <p class="lead">
-            <strong>A secure, flexible AI platform </strong> 
-        </p>
-        <p>
-            We use Escher to deeply customize AI to your organization that produce faster, more accurate results inside the tools you already use, like Excel, Outlook, SharePoint, and more.  
-        </p>
-
-        <h2>About Us</h2>
-        <p>
-            We are AI engineers from leading ML organizations like Amazon Alexa, AWS, Lyft, and Elastic, where we deployed AI systems to leading organizations like Capital One, Staples, Cisco, Liberty Mutual, and the NFL.
-        </p>
-        <p></p>
 
         <span id="company" class="anchor"></span>
         <section>
