@@ -290,6 +290,15 @@
             h1 {
                 font-size: 2rem
             }
+            
+            .case > div {
+                flex-direction: column !important;
+            }
+            
+            .case > div > div:last-child {
+                flex: 1 1 auto !important;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -382,30 +391,58 @@
 
     <header class="hero" id="top">
         <h1>We automate critical business processes with AI.</h1>
-        <p class="lead">
+        <h3>
             Strange Loop Labs partners with Fortune 500s and leading firms to turn complex processes involving <strong>unstructured data</strong> and <strong>legacy software</strong> into <strong>AI automations</strong>.
-        </h3> 
+        </h3>
     </header>
 
     <main>
         <section class="case" style="margin-top: 8px; margin-bottom: 32px;">
-            <h3>Case Study: Big Four Accounting Firm</h3>
-            <p>How one Big Four firm used Strange Loop to process 100,000+ K-1s with 98% accuracy — cutting
-                turnaround from weeks to days.</p>
+            <div style="display: flex; gap: 32px; align-items: flex-start;">
+                <div style="flex: 1;">
+                    <h3 style="margin-top: 0;">Case Study: Big Four Accounting Firm</h3>
+                    <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
+                        PwC’s tax teams handle millions of messy K-1s with unstructured tables, handwritten notes, and state-specific rules—where traditional automation failed.
+We embedded our engineers with PwC, rapidly building AI agents tailored to their exact process.
+                    </p>
+                    <p style="font-style: italic; color: #444; margin-top: 20px;">
+                        "Strange Loop didn't just automate our process — they understood it. Their team sat with our tax professionals, learned our edge cases, and built something that actually works in production."
+                        <br><span style="font-style: normal; font-size: 0.9rem;">— Partner, Tax Technology</span>
+                    </p>
+                    <div class="stats" style="margin: 24px 0;">
+                        <div class="stat">
+                            <b>100,000+</b>
+                            <span style="font-size: 0.9rem; color: var(--muted);">K-1s processed</span>
+                        </div>
+                        <div class="stat">
+                            <b>98%</b>
+                            <span style="font-size: 0.9rem; color: var(--muted);">accuracy rate</span>
+                        </div>
+                        <div class="stat">
+                            <b>85%</b>
+                            <span style="font-size: 0.9rem; color: var(--muted);">time reduction</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div style="flex: 0 0 380px;">
+                    <img src="images/image.png" alt="AI processing tax documents" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                </div>
+            </div>
         </section>
 
         <h2>Our Approach: Outcomes, Not Tools</h2>
         <p>
-            <strong>95% of enteprise AI pilots fail.</strong> 
+            <strong>95% of enteprise AI pilots fail</strong>  because enterprises are sold <em>tools </em> instead of <em>outcomes</em>. We deliver those outcomes through two principles: 
         </p>
         <p class="lead">
-            <strong>Differentiated AI outcomes come from partnerships, not tools.</strong> 
+            <strong>Partnerships that embed AI engineers with your experts</strong> 
         </p>
         <p>
-            We sit with your experts, observe and correct AI failures, and obsess over every point of accuracy. We start with one critical workflow and deploy a solution in <strong>weeks, not months</strong>, then scale across the organization. 
+            We start with one critical workflow and deploy a solution in <strong>weeks, not months</strong>, then scale across the organization. We sit with your experts, observe and correct AI failures, and obsess over every point of accuracy. 
         </p>
         <p class="lead">
-            <strong>Great AI experiences are powered by flexible platforms.</strong> 
+            <strong>A flexible AI platform that powers inutitive AI experiences</strong> 
         </p>
         <p>
             We use Escher, our AI automation platform, to deeply customize AI to your organization. Your team will never have to learn "how" to use AI -- they will just see faster, more accurate results within tools they already use, as if they hired a smart new teammate. 
