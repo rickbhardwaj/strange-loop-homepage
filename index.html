@@ -422,59 +422,170 @@
     </nav>
 
     <header class="hero" id="top">
-        <h1>We build AI that automates critical processes at the world's most trusted firms.</h1>  
+        <h1>We automate critical processes with AI for leading enterprises and trusted firms.</h1>  
+        <div class="logo-strip">
+            <div class="logo-strip-inner">
+                <img src="images/excel.png" alt="Excel" />
+                <img src="images/outlook.png" alt="Outlook" />
+                <img src="images/pdg.png" alt="PDG" />
+                <img src="images/alteryx.png" alt="Alteryx" />
+                <img src="images/sap.png" alt="SAP" />
+                <img src="images/addepar.png" alt="Addepar" />
+            </div>
+        </div> 
+        <h2>
+            Case Studies
+        </h2>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PwC Case Studies — Strange Loop Labs</title>
+  <style>
+    :root {
+      --fg: #0b0b0b;
+      --muted: #5b5b5b;
+      --line: #e9e9e9;
+      --bg: #ffffff;
+      --soft: #f7f7f7;
+      --accent: #111111;
+      --max: 980px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 40px 16px; background: var(--bg); color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .wrap { max-width: var(--max); margin: 0 auto; }
+    .eyebrow { text-transform: uppercase; letter-spacing: .06em; font-size: 12px; color: var(--muted); }
+    h2 { margin: 0 0 16px; font-size: 28px; line-height: 1.2; }
+    h3 { margin: 0 0 8px; font-size: 20px; line-height: 1.25; }
+    h4 { margin: 0 0 6px; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+    p { margin: 0 0 8px; }
+    ul { margin: 0; padding-left: 18px; }
+
+    .grid { display: grid; gap: 16px; }
+
+    .card {
+      border: 1px solid var(--line); border-radius: 14px; background: var(--soft);
+      padding: 18px 18px 16px;
+    }
+    .lede { color: var(--fg); font-weight: 500; }
+
+    .cols { display: grid; gap: 12px; grid-template-columns: 1fr; }
+    @media (min-width: 860px) { .cols { grid-template-columns: 1.1fr 1fr 1fr; } }
+
+    .meta { color: var(--muted); font-size: 14px; }
+    .pill { display: inline-block; padding: 2px 8px; border: 1px solid var(--line); border-radius: 999px; font-size: 12px; color: var(--muted); }
+    .checklist li { margin: 4px 0; }
+    .checklist li::marker { content: "✓ "; }
+    .dash li::marker { content: "– "; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="grid">
+      <!-- CASE STUDY 1: WORKFLOW AUTOMATION / AGENT -->
+      <article class="card">
+        <div class="eyebrow">PwC • Workflow automation</div>
+        <h3>Agent‑driven tax processing that finishes in half the time</h3>
+        <p class="lede">We deployed an AI agent that reads K‑1s, reconciles rules, and delivers outputs directly into Excel and existing Reuters tax software—surfacing humans only where judgment is needed.</p>
+
+        <div class="cols">
+          <section>
+            <h4>Challenge</h4>
+            <ul class="dash">
+              <li>Multi‑state K‑1 rules + legacy macros</li>
+              <li>Two‑week end‑to‑end turnaround</li>
+              <li>High exception volume and rework</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Approach</h4>
+            <ul class="dash">
+              <li>Embedded with PwC; iterated daily over weeks</li>
+              <li>Agent reads documents, flags exceptions, and learns edge cases</li>
+              <li>Outputs flow into Excel and Reuters tax stack</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Results</h4>
+            <ul class="checklist">
+              <li><strong>50% faster</strong> turnaround today; path toward <strong>80%</strong></li>
+              <li>Higher accuracy on previously error‑prone steps</li>
+              <li>Tax pros focus on judgment, not wrangling</li>
+            </ul>
+          </section>
+        </div>
+      </article>
+
+      <!-- CASE STUDY 2: DOCUMENT EXTRACTION -->
+      <article class="card">
+        <div class="eyebrow">PwC • Document extraction</div>
+        <h3>Precision extraction that powers the downstream workflow</h3>
+        <p class="lede">A custom extraction engine tuned to PwC’s documents produces structured data that feeds directly into their Excel models and Reuters tax software.</p>
+
+        <div class="cols">
+          <section>
+            <h4>Challenge</h4>
+            <ul class="dash">
+              <li>Unstructured tables, handwriting, jurisdiction quirks</li>
+              <li>Off‑the‑shelf AI failed on edge cases</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Approach</h4>
+            <ul class="dash">
+              <li>Sat side‑by‑side with PwC to correct edge cases</li>
+              <li>Domain‑specific models + reusable AI modules</li>
+              <li>Structured outputs straight to Excel + Reuters</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Results</h4>
+            <ul class="checklist">
+              <li>Material accuracy gains vs. generic tools</li>
+              <li>Fewer manual corrections and rework</li>
+              <li>Reliable inputs accelerate the agent workflow</li>
+            </ul>
+          </section>
+        </div>
+      </article>
+    </div>
+
+    <!-- Optional small footnote line -->
+    <p class="meta" style="margin-top:12px">All integrations used PwC’s existing environments (Excel, SharePoint, Reuters tax software).</p>
+  </div>
+</body>
+</html>
+
+        
+    </header>
+
+    <main> 
         <p class="lead">
-            Our team built large-scale AI systems at Amazon Alexa and AWS. We now apply that expertise to deliver AI tailored to strategic, expert-driven processes.
-        </p>
-    <h2>
-        Our approach
-    </h2>
-        <h3>
-            Outcomes, not tools
-        </h3>
-        <p class="lead">
-            95% of AI pilots fail because generic tools struggle on your specific tasks. We start with one critical workflow, work closely with your experts, obsess over accuracy, and deploy in weeks, not months. Then we scale across the organization.
+            Strange Loop partners with Fortune 500s and trusted firms to deliver tailored AI automations for complex processes. 
+            We start with one critical workflow, work closely with your experts, obsess over accuracy, and deploy in weeks, not months. Then we scale across the organization.
+
+            We're deliver these AI automations via the Strange Loop Platform.
+
+            Our team built large-scale AI systems at Amazon Alexa and AWS. We now apply that expertise to deliver AI automations tailored to Fortune 500s and elite firms.
         </p>
         <h3>
-            Delivered via a Secure, Flexible Platform 
+            A Secure, Flexible Platform 
         </h3>
         <p class="lead">
             The Strange Loop Platform enables us to rapidly build tailored <strong>AI automations</strong> that understand your unstructured data and documents, work seamlessly with the tools you already use, and learn your team's process every day.
         </p>
-    <div class="logo-strip">
-        <div class="logo-strip-inner">
-            <img src="images/excel.png" alt="Excel" />
-            <img src="images/outlook.png" alt="Outlook" />
-            <img src="images/pdg.png" alt="PDG" />
-            <img src="images/alteryx.png" alt="Alteryx" />
-            <img src="images/sap.png" alt="SAP" />
-            <img src="images/addepar.png" alt="Addepar" />
-        </div>
-    </div>
-    </header>
-
-    <main>
-    <h2>
-        Case Studies
-    </h2>
-        <section class="case" style="margin-top: 8px; margin-bottom: 32px;">
-            <div style="display: flex; gap: 32px; align-items: flex-start;">
-                <div style="flex: 1;">
-                    <h3 style="margin-top: 0;">Case Study: Big Four Accounting Firm</h3>
-                    <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
-                        PwC’s tax teams handle millions of messy K-1s with unstructured tables, handwritten notes, and state-specific rules—where traditional automation failed.
-We embedded our engineers with PwC, rapidly building AI agents tailored to their exact process.
-                    </p>
-                    <p style="font-style: italic; color: #444; margin-top: 20px;">
-                        "Strange Loop didn't just automate our process — they understood it. Their team sat with our tax professionals, learned our edge cases, and built something that actually works in production."
-                        <br><span style="font-style: normal; font-size: 0.9rem;">— Partner, Tax Technology</span>
-                    </p>
-                </div>
-                <div style="flex: 0 0 380px;">
-                    <img src="images/image.png" alt="AI processing tax documents" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
-                </div>
-            </div>
-        </section>
+        <h3>
+            We deliver outcomes, not more tools
+        </h3>
+        <p class="lead">
+            95% of AI pilots fail because generic tools struggle on your specific tasks. We start with one critical workflow, work closely with your experts, obsess over accuracy, and deploy in weeks, not months. Then we scale across the organization.
+        </p>
 
         <span id="company" class="anchor"></span>
         <section>
