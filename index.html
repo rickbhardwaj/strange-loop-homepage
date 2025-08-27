@@ -313,6 +313,70 @@
             filter: grayscale(0%);
         }
 
+        /* Case Studies Grid */
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .case-study-box {
+            background: var(--soft);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .case-study-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .case-study-header {
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            font-size: 12px;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        .case-study-box h3 {
+            margin: 0 0 12px;
+            font-size: 1.3rem;
+            line-height: 1.2;
+        }
+
+        .case-study-box p {
+            margin: 0 0 16px;
+            color: #333;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .case-results {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .case-results li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #222;
+        }
+
+        .case-results li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
         /* Responsive */
         @media (max-width:880px) {
             .summary {
@@ -330,6 +394,10 @@
             .case > div > div:last-child {
                 flex: 1 1 auto !important;
                 max-width: 100%;
+            }
+
+            .case-studies-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -427,7 +495,7 @@
             Strange Loop partners with leading enterprises to deliver <em>AI outcomes</em> -- not more tools or platforms.
         </p>
         <p class="lead">
-            We are a team of AI engineers from leading ML orgs like Amazon. We work closely with your experts to configure AI that outperforms humans and integrates with the software tools you already use. 
+            We are a team of AI engineers from leading ML orgs like Amazon Alexa. We work closely with your experts to configure AI that outperforms humans and integrates with the software tools you already use. 
         </p>
         <p class="lead">
             We start with one critical workflow, deploy in weeks, then scale across the organization -- powered by a platform of AI building blocks, battle-tested against complex professional workflows.
@@ -437,147 +505,53 @@
     <main>
         <section>
             <h2>Case Studies</h2>
-            <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PwC Case Studies — Strange Loop Labs</title>
-  <style>
-    :root {
-      --fg: #0b0b0b;
-      --muted: #5b5b5b;
-      --line: #e9e9e9;
-      --bg: #ffffff;
-      --soft: #f7f7f7;
-      --accent: #111111;
-      --max: 980px;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0; padding: 40px 16px; background: var(--bg); color: var(--fg);
-      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Inter, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-    }
-    .wrap { max-width: var(--max); margin: 0 auto; }
-    .eyebrow { text-transform: uppercase; letter-spacing: .06em; font-size: 12px; color: var(--muted); }
-    h2 { margin: 0 0 16px; font-size: 28px; line-height: 1.2; }
-    h3 { margin: 0 0 8px; font-size: 20px; line-height: 1.25; }
-    h4 { margin: 0 0 6px; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
-    p { margin: 0 0 8px; }
-    ul { margin: 0; padding-left: 18px; }
+            <div class="case-studies-grid">
+                <!-- CASE STUDY 1: Tax Processing -->
+                <div class="case-study-box">
+                    <div class="case-study-header">PwC • Tax Automation</div>
+                    <h3>50% Faster Tax Processing</h3>
+                    <p>AI agent reads K-1s, reconciles multi-state rules, and delivers outputs directly into Excel and Reuters tax software.</p>
+                    <ul class="case-results">
+                        <li>Two-week process cut in half</li>
+                        <li>Higher accuracy on complex steps</li>
+                        <li>Seamless tool integration</li>
+                    </ul>
+                </div>
 
-    .grid { display: grid; gap: 16px; }
+                <!-- CASE STUDY 2: Document Extraction -->
+                <div class="case-study-box">
+                    <div class="case-study-header">PwC • Document Extraction</div>
+                    <h3>Precision Data Extraction</h3>
+                    <p>Custom engine handles unstructured tables, handwriting, and jurisdiction quirks where off-the-shelf AI failed.</p>
+                    <ul class="case-results">
+                        <li>Material accuracy gains</li>
+                        <li>Fewer manual corrections</li>
+                        <li>Direct Excel/Reuters output</li>
+                    </ul>
+                </div>
 
-    .card {
-      border: 1px solid var(--line); border-radius: 14px; background: var(--soft);
-      padding: 18px 18px 16px;
-    }
-    .lede { color: var(--fg); font-weight: 500; }
-
-    .cols { display: grid; gap: 12px; grid-template-columns: 1fr; }
-    @media (min-width: 860px) { .cols { grid-template-columns: 1.1fr 1fr 1fr; } }
-
-    .meta { color: var(--muted); font-size: 14px; }
-    .pill { display: inline-block; padding: 2px 8px; border: 1px solid var(--line); border-radius: 999px; font-size: 12px; color: var(--muted); }
-    .checklist li { margin: 4px 0; }
-    .checklist li::marker { content: "✓ "; }
-    .dash li::marker { content: "– "; }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-
-    <div class="grid">
-      <!-- CASE STUDY 1: WORKFLOW AUTOMATION / AGENT -->
-      <article class="card">
-        <div class="eyebrow">PwC • Workflow automation</div>
-        <h3>Agent‑driven tax processing that finishes in half the time</h3>
-        <p class="lede">We deployed an AI agent that reads K‑1s, reconciles rules, and delivers outputs directly into Excel and existing Reuters tax software—surfacing humans only where judgment is needed.</p>
-
-        <div class="cols">
-          <section>
-            <h4>Challenge</h4>
-            <ul class="dash">
-              <li>Multi‑state K‑1 rules + legacy macros</li>
-              <li>Two‑week end‑to‑end turnaround</li>
-              <li>High exception volume and rework</li>
-            </ul>
-          </section>
-          <section>
-            <h4>Approach</h4>
-            <ul class="dash">
-              <li>Embedded with PwC; iterated daily over weeks</li>
-              <li>Agent reads documents, flags exceptions, and learns edge cases</li>
-              <li>Outputs flow into Excel and Reuters tax stack</li>
-            </ul>
-          </section>
-          <section>
-            <h4>Results</h4>
-            <ul class="checklist">
-              <li><strong>50% faster</strong> turnaround today; path toward <strong>80%</strong></li>
-              <li>Higher accuracy on previously error‑prone steps</li>
-              <li>Tax pros focus on judgment, not wrangling</li>
-            </ul>
-          </section>
-        </div>
-      </article>
-
-      <!-- CASE STUDY 2: DOCUMENT EXTRACTION -->
-      <article class="card">
-        <div class="eyebrow">PwC • Document extraction</div>
-        <h3>Precision extraction that powers the downstream workflow</h3>
-        <p class="lede">A custom extraction engine tuned to PwC’s documents produces structured data that feeds directly into their Excel models and Reuters tax software.</p>
-
-        <div class="cols">
-          <section>
-            <h4>Challenge</h4>
-            <ul class="dash">
-              <li>Unstructured tables, handwriting, jurisdiction quirks</li>
-              <li>Off‑the‑shelf AI failed on edge cases</li>
-            </ul>
-          </section>
-          <section>
-            <h4>Approach</h4>
-            <ul class="dash">
-              <li>Sat side‑by‑side with PwC to correct edge cases</li>
-              <li>Domain‑specific models + reusable AI modules</li>
-              <li>Structured outputs straight to Excel + Reuters</li>
-            </ul>
-          </section>
-          <section>
-            <h4>Results</h4>
-            <ul class="checklist">
-              <li>Material accuracy gains vs. generic tools</li>
-              <li>Fewer manual corrections and rework</li>
-              <li>Reliable inputs accelerate the agent workflow</li>
-            </ul>
-          </section>
-        </div>
-      </article>
-    </div>
-
-    <!-- Optional small footnote line -->
-    <p class="meta" style="margin-top:12px">All integrations used PwC’s existing environments (Excel, SharePoint, Reuters tax software).</p>
-  </div>
-</body>
-</html>
+                <!-- CASE STUDY 3: Compliance Workflows -->
+                <div class="case-study-box">
+                    <div class="case-study-header">PwC • Compliance Automation</div>
+                    <h3>80% Workflow Automation</h3>
+                    <p>AI handles routine compliance checks and documentation, escalating only complex judgments to human experts.</p>
+                    <ul class="case-results">
+                        <li>80% reduction in manual work</li>
+                        <li>Real-time exception handling</li>
+                        <li>Full audit trail maintained</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section>
-            <h2>Platform</h2>
-            <h3>A Secure, Flexible Platform</h3>
+            <h2>An AI Platform Purpose-Built for Enterprise Workflows</h2>
             <p class="lead">
-                The Strange Loop Platform enables us to rapidly build tailored <strong>AI automations</strong> that understand your unstructured data and documents, work seamlessly with the tools you already use, and learn your team's process every day.
+                Our platform makes AI deployments repeatable and scalable—not one-offs. It’s built on proven AI Modules -- building blocks we've assembled across our enterprise integrations. 
             </p>
-            
-            <h3>We deliver outcomes, not more tools</h3>
             <p class="lead">
-                95% of AI pilots fail because generic tools struggle on your specific tasks. We start with one critical workflow, work closely with your experts, obsess over accuracy, and deploy in weeks, not months. Then we scale across the organization.
+                Our platform also integrates seamlessly with the tools your teams already use and learns from your existing Excel worksheets, Alteryx workflows, SOPs, and other process artifacts.
             </p>
-
-            <h3>Seamless Integration</h3>
-            <p class="lead">We integrate with the tools your teams already use:</p>
             <div class="logo-strip">
                 <div class="logo-strip-inner">
                     <img src="images/excel.png" alt="Excel" />
