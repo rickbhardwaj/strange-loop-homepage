@@ -109,6 +109,56 @@
             max-width: 800px;
         }
 
+        .challenges-banner {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 32px;
+            background: #f8f8f8;
+            border-radius: 12px;
+        }
+
+        .banner-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #888;
+            margin: 0 0 24px 0;
+            text-align: center;
+        }
+
+        .challenge-tags {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .challenge-tag {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 16px;
+            background: white;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #222;
+            transition: all 0.2s;
+        }
+
+        .challenge-tag:hover {
+            background: #fafafa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        @media (max-width: 600px) {
+            .challenge-tags {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Cred strip */
         .cred {
             border-top: 1px solid var(--line);
@@ -499,18 +549,44 @@
     </nav>
 
     <header class="hero" id="top">
-        <h1>Make AI Your Competitive Advantage</h1>
+        <h1>We automate processes generic AI can't.</h1>
         <p class="subtitle">
-            Strange Loop builds AI to automate processes for leading firms. We focus on where generic tools fail: unstructured data, specialized expertise, legacy systems, and massive scale.
-        </p> 
+            Strange Loop builds custom AI for the world's leading firms.
+        </p>
+        <h3>Where generic AI fails</h3>
+        <p class="lead">
+            We're AI engineers from leading ML organizations like Amazon Alexa, where we've seen it's limitations firsthand. Generic AI handles simple tasks, but it fails on the high-stakes processes that define leading firms. 
+        </p>
+        <div class="challenges-banner">
+            <div class="challenge-tags">
+                <span class="challenge-tag">📄 Unstructured data</span>
+                <span class="challenge-tag">🎯 Specialized expertise</span>
+                <span class="challenge-tag">🏛️ Legacy systems</span>
+                <span class="challenge-tag">📈 Enterprise scale</span>
+            </div>
+        </div>
     </header>
 
     <main>
         <section style="margin-top: 0px;">
-            <h2>Case Studies</h2>
+            <h3>How we solve this</h3>
             <p class="lead">
-                Our team are <strong>AI engineers</strong> from leading ML orgs like Amazon Alexa. We sit with experts, integrate AI into their system in <strong>weeks</strong>, then scale across the organization.
+                We sit with your experts to capture the rules, edge cases, and judgment calls that generic AI misses. Each solution is tailored to the way your professionals actually work, not a one-size-fits-all model.
             </p>
+            <p class="lead">
+                Our platform enables us to deploy AI in weeks, not months (or years.) We compose AI modules that can reason over enterprise data and systems — from PDFs and Excel sheets to Alteryx workflows and ERP platforms.
+            </p>
+            <div class="logo-strip">
+                <div class="logo-strip-inner">
+                    <img src="images/excel.png" alt="Excel" />
+                    <img src="images/outlook.png" alt="Outlook" />
+                    <img src="images/pdg.png" alt="PDG" />
+                    <img src="images/alteryx.png" alt="Alteryx" />
+                    <img src="images/sap.png" alt="SAP" />
+                    <img src="images/addepar.png" alt="Addepar" />
+                </div>
+            </div>
+            <h3>Case Studies</h3>
             <div class="case-studies-grid">
                 <!-- CASE STUDY 1: Tax Processing -->
                 <div class="case-study-box">
@@ -575,7 +651,7 @@
 
         <span id="company" class="anchor"></span>
         <section>
-            <button type="button" class="work-with-us-btn">Get Started</button>
+            <button type="button" class="work-with-us-btn">Make AI Your Strategic Advantage</button>
         </section>
     </main>
 
