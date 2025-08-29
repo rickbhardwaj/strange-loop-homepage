@@ -110,52 +110,45 @@
         }
 
         .challenges-banner {
-            max-width: 600px;
-            margin: 2rem auto;
-            padding: 32px;
-            background: #f8f8f8;
-            border-radius: 12px;
-        }
-
-        .banner-label {
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: #888;
-            margin: 0 0 24px 0;
-            text-align: center;
+            background: #fafafa;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            padding: 24px 20px;
+            margin: 32px -20px 0;
         }
 
         .challenge-tags {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
+            max-width: var(--max);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+            flex-wrap: wrap;
         }
 
         .challenge-tag {
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 8px;
-            padding: 16px;
-            background: white;
-            border-radius: 8px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 500;
-            color: #222;
+            color: #555;
             transition: all 0.2s;
         }
 
         .challenge-tag:hover {
-            background: #fafafa;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            color: #222;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             .challenge-tags {
-                grid-template-columns: 1fr;
+                gap: 16px;
+                justify-content: center;
+            }
+            
+            .challenge-tag {
+                font-size: 0.9rem;
             }
         }
 
@@ -549,13 +542,18 @@
     </nav>
 
     <header class="hero" id="top">
-        <h1>We automate processes generic AI can't.</h1>
-        <p class="subtitle">
-            Strange Loop builds custom AI for the world's leading firms.
-        </p>
-        <h3>Where generic AI fails</h3>
+        <h1>We deliver outcomes that generic AI can't.</h1>
+        <!-- <p class="subtitle">
+            Strange Loop automates critical processes for the world's leading firms.
+        </p> -->
         <p class="lead">
-            We're AI engineers from leading ML organizations like Amazon Alexa, where we've seen it's limitations firsthand. Generic AI handles simple tasks, but it fails on the high-stakes processes that define leading firms. 
+            Generic AI fails on the <strong>high-stakes processes</strong> that define leading firms. 
+        </p>
+        <p class="lead">
+            We sit with your experts to build <strong>custom AI</strong> that understands your <strong>nuances</strong>, <strong>messy documents</strong>, and <strong>multi-system workflows</strong>. Each solution is tailored to the way your professionals actually work, not a one-size-fits-all model.
+        </p>
+        <p class="lead">
+            Our platform enables us to deploy custom AI in <strong>weeks</strong>, not months (or years.) 
         </p>
         <div class="challenges-banner">
             <div class="challenge-tags">
@@ -569,23 +567,6 @@
 
     <main>
         <section style="margin-top: 0px;">
-            <h3>How we solve this</h3>
-            <p class="lead">
-                We sit with your experts to capture the rules, edge cases, and judgment calls that generic AI misses. Each solution is tailored to the way your professionals actually work, not a one-size-fits-all model.
-            </p>
-            <p class="lead">
-                Our platform enables us to deploy AI in weeks, not months (or years.) We compose AI modules that can reason over enterprise data and systems — from PDFs and Excel sheets to Alteryx workflows and ERP platforms.
-            </p>
-            <div class="logo-strip">
-                <div class="logo-strip-inner">
-                    <img src="images/excel.png" alt="Excel" />
-                    <img src="images/outlook.png" alt="Outlook" />
-                    <img src="images/pdg.png" alt="PDG" />
-                    <img src="images/alteryx.png" alt="Alteryx" />
-                    <img src="images/sap.png" alt="SAP" />
-                    <img src="images/addepar.png" alt="Addepar" />
-                </div>
-            </div>
             <h3>Case Studies</h3>
             <div class="case-studies-grid">
                 <!-- CASE STUDY 1: Tax Processing -->
