@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Strange Loop Labs</title>
     <meta name="description" content="We automate critical business processes with AI." />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --fg: #111;
@@ -113,28 +115,141 @@
             background: #fafafa;
             border-top: 1px solid var(--line);
             border-bottom: 1px solid var(--line);
-            padding: 24px 20px;
+            padding: 32px 20px;
             margin: 32px -20px 0;
         }
 
-        .challenge-tags {
+        .challenge-categories {
             max-width: var(--max);
             margin: 0 auto;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 32px;
+            justify-content: space-around;
+            align-items: flex-start;
             flex-wrap: wrap;
+            gap: 40px;
         }
 
-        .challenge-tag {
+        .challenge-category {
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+        }
+
+        .category-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 16px;
+        }
+
+        .category-icons {
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 8px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: #555;
+            gap: 20px;
+            flex-wrap: wrap;
+            min-height: 60px;
+        }
+
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .icon-item i {
+            font-size: 28px;
+            color: var(--muted);
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .icon-item:hover i {
+            opacity: 1;
+        }
+
+        .icon-item .brand-logo {
+            height: 32px;
+            width: auto;
+            display: block;
+            opacity: 0.7;
+            filter: grayscale(100%);
             transition: all 0.2s;
+        }
+
+        .icon-item:hover .brand-logo {
+            opacity: 0.9;
+            filter: grayscale(50%);
+        }
+
+        .icon-label {
+            font-size: 0.75rem;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        .brand-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--muted);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .icon-item:hover .brand-text {
+            opacity: 1;
+        }
+
+        .expertise-badge {
+            background: #5b21b6;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px rgba(91, 33, 182, 0.25);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .expertise-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(91, 33, 182, 0.35);
+        }
+
+        .expertise-badge.alt-1 {
+            background: #dc2626;
+            box-shadow: 0 2px 8px rgba(220, 38, 38, 0.25);
+        }
+
+        .expertise-badge.alt-1:hover {
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.35);
+        }
+
+        .expertise-badge.alt-2 {
+            background: #0891b2;
+            box-shadow: 0 2px 8px rgba(8, 145, 178, 0.25);
+        }
+
+        .expertise-badge.alt-2:hover {
+            box-shadow: 0 4px 12px rgba(8, 145, 178, 0.35);
+        }
+
+        @media (max-width: 768px) {
+            .challenge-categories {
+                gap: 30px;
+            }
+            .challenge-category {
+                min-width: 100%;
+            }
+            .category-icons {
+                gap: 16px;
+            }
         }
 
         .challenge-tag:hover {
@@ -547,17 +662,63 @@
             <strong>Strange Loop automates critical processes for the world's leading firms.</strong>
         </p>
         <p class="lead">
-            We are AI engineers from leading ML orgs like Amazon Alexa. We sit with your experts to build <strong>custom AI</strong> for your documents, data, and tools, powered by our secure AI platform. 
+            We are AI engineers from leading ML orgs like Amazon Alexa. We sit with experts to build <strong>custom AI</strong>, powered by our secure AI platform. 
         </p>
         <p class="lead">
             We start with one critical workflow, <strong>deploy in weeks</strong>, and refine based on real-world feedback. Then we <strong>scale across the organization</strong>. 
         </p>
         <div class="challenges-banner">
-            <div class="challenge-tags">
-                <span class="challenge-tag">📄 Unstructured data</span>
-                <span class="challenge-tag">🎯 Specialized expertise</span>
-                <span class="challenge-tag">🏛️ Legacy systems</span>
-                <span class="challenge-tag">📈 Enterprise scale</span>
+            <div class="challenge-categories">
+                <!-- Unstructured Data -->
+                <div class="challenge-category">
+                    <div class="category-title">Unstructured Data</div>
+                    <div class="category-icons">
+                        <div class="icon-item">
+                            <i class="fa-solid fa-file-pdf" style="color: #dc2626; font-size: 32px;"></i>
+                        </div>
+                        <div class="icon-item">
+                            <i class="fa-solid fa-file-excel" style="color: #16a34a; font-size: 32px;"></i>
+                        </div>
+                        <div class="icon-item">
+                            <i class="fa-solid fa-file-word" style="color: #2563eb; font-size: 32px;"></i>
+                        </div>
+                        <div class="icon-item">
+                            <img src="images/outlook.png" alt="Outlook" class="brand-logo" style="height: 36px;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legacy Systems -->
+                <div class="challenge-category">
+                    <div class="category-title">Legacy Systems</div>
+                    <div class="category-icons">
+                        <div class="icon-item">
+                            <img src="images/sap.png" alt="SAP" class="brand-logo" style="height: 36px;">
+                        </div>
+                        <div class="icon-item">
+                            <img src="images/oracle.webp" alt="Oracle" class="brand-logo" style="height: 36px;">
+                        </div>
+                        <div class="icon-item">
+                            <span class="brand-text" style="color: #ff8000; font-size: 20px;">Reuters</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specialized Expertise -->
+                <div class="challenge-category">
+                    <div class="category-title">Specialized Expertise</div>
+                    <div class="category-icons">
+                        <div class="icon-item">
+                            <span class="expertise-badge">CFA</span>
+                        </div>
+                        <div class="icon-item">
+                            <span class="expertise-badge alt-1">SOX</span>
+                        </div>
+                        <div class="icon-item">
+                            <span class="expertise-badge alt-2">GDPR</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
