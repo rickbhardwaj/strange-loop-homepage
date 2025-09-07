@@ -482,21 +482,18 @@
 
         /* Case Studies Grid */
         .case-studies-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-            margin-top: 32px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 24px;
         }
 
         .case-study-box {
             background: var(--soft);
             border: 1px solid var(--line);
             border-radius: 12px;
-            padding: 32px;
+            padding: 20px;
             transition: transform 0.2s, box-shadow 0.2s;
-            display: flex;
-            gap: 32px;
-            align-items: flex-start;
         }
 
         .case-study-box:hover {
@@ -505,18 +502,18 @@
         }
 
         .case-study-visual {
-            flex-shrink: 0;
-            width: 80px;
-            height: 80px;
+            width: 50px;
+            height: 50px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 12px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
+            font-size: 20px;
             color: white;
             font-weight: bold;
             font-family: 'Georgia', serif;
+            margin-bottom: 12px;
         }
 
         .case-study-visual.alt-1 {
@@ -527,61 +524,56 @@
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         }
 
-        .case-study-content {
-            flex: 1;
-        }
-
         .case-study-header {
             text-transform: uppercase;
             letter-spacing: .06em;
-            font-size: 12px;
+            font-size: 11px;
             color: var(--muted);
             margin-bottom: 8px;
         }
 
         .case-study-box h3 {
-            margin: 0 0 16px;
-            font-size: 1.5rem;
-            line-height: 1.2;
+            margin: 0 0 12px;
+            font-size: 1.1rem;
+            line-height: 1.25;
         }
 
         .case-study-box p {
-            margin: 0 0 20px;
+            margin: 0 0 16px;
             color: #333;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        .case-study-box .highlight {
-            font-size: 1.05rem;
-            font-weight: 500;
-            color: #111;
-            margin-bottom: 20px;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
 
         .case-results {
             list-style: none;
             padding: 0;
-            margin: 0 0 24px 0;
-            display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
+            margin: 0 0 16px 0;
         }
 
         .case-results li {
             position: relative;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             color: #222;
             font-weight: 500;
+            margin-bottom: 8px;
+            padding-left: 18px;
+        }
+
+        .case-results li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--muted);
         }
 
         .case-study-cta {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 8px 16px;
             background: var(--accent);
             color: white;
             border-radius: 6px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 500;
             transition: opacity 0.2s;
         }
@@ -592,14 +584,8 @@
         }
 
         @media (max-width: 768px) {
-            .case-study-box {
-                flex-direction: column;
-                padding: 24px;
-            }
-
-            .case-results {
-                flex-direction: column;
-                gap: 12px;
+            .case-studies-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -721,16 +707,68 @@
     </nav>
 
     <header class="hero" id="top">
-        <h1>We deliver outcomes that generic AI can't.</h1>
+        <h1>AI Automation for Leading Firms.</h1>
         <p class="subtitle">
-            <strong>Strange Loop builds AI that automates critical processes at leading firms.</strong>
+            <strong>Strange Loop helps professionals deliver faster, better outcomes with custom AI.</strong>
         </p>
         <!-- <p class="lead">
             We are AI engineers from leading ML orgs like Amazon Alexa. We sit with experts to build <strong>custom AI</strong>, powered by our secure AI platform. 
         </p>
         <p class="lead">
             We start with one critical workflow, <strong>deploy in weeks</strong>, and refine based on real-world feedback. Then we <strong>scale across the organization</strong>. 
-        </p> -->
+        </p> --> 
+    </header>
+
+    <main>
+        <section style="margin-top: 0px;">
+            <h3>Case Studies</h3>
+            <div class="case-studies-grid">
+                <!-- CASE STUDY 1: Tax Compliance -->
+                <div class="case-study-box">
+                    <div class="case-study-visual">B4</div>
+                    <div class="case-study-header">Big Four Accounting Firm</div>
+                    <h3>Financial Reconciliation AI</h3>
+                    <p>Built an Excel AI add-in that transformed a 20-person tax team's workflow. What took 60 minutes of manual Alteryx error-fixing now takes 5 minutes of AI-assisted review.</p>
+                    <ul class="case-results">
+                        <li>92% faster processing</li>
+                        <li>$1M+ annual savings</li>
+                        <li>20% capacity increase</li>
+                    </ul>
+                    <a href="#" class="case-study-cta">Read More →</a>
+                </div>
+
+                <!-- CASE STUDY 2: Document Intelligence -->
+                <div class="case-study-box">
+                    <div class="case-study-visual alt-1">FS</div>
+                    <div class="case-study-header">Fortune 500 Financial Services</div>
+                    <h3>Document Intelligence Platform</h3>
+                    <p>Deployed AI that processes complex documents 24/7—from tax forms to handwritten notes. Eliminated document backlog and redeployed 15 offshore analysts to client work.</p>
+                    <ul class="case-results">
+                        <li>99.8% accuracy</li>
+                        <li>Same-day processing</li>
+                        <li>15 FTEs redeployed</li>
+                    </ul>
+                    <a href="#" class="case-study-cta">Read More →</a>
+                </div>
+
+                <!-- CASE STUDY 3: Wealth Management -->
+                <div class="case-study-box">
+                    <div class="case-study-visual alt-2">WM</div>
+                    <div class="case-study-header">Wealth Management Platform</div>
+                    <h3>Client Onboarding Automation</h3>
+                    <p>Built AI agents that understand fund structures and compliance rules. Reduced onboarding from 2 weeks to same-day, eliminating BPO dependency entirely.</p>
+                    <ul class="case-results">
+                        <li>14 days → same-day</li>
+                        <li>Zero BPO dependency</li>
+                        <li>50% fewer drop-offs</li>
+                    </ul>
+                    <a href="#" class="case-study-cta">Read More →</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secure, Flexible AI Infrastructure</h2>
         <div class="challenges-banner">
             <div class="challenge-categories">
                 <!-- Unstructured Data -->
@@ -785,67 +823,6 @@
                 </div>
             </div>
         </div>
-    </header>
-
-    <main>
-        <section style="margin-top: 0px;">
-            <h3>Case Studies</h3>
-            <div class="case-studies-grid">
-                <!-- CASE STUDY 1: Tax Compliance -->
-                <div class="case-study-box">
-                    <div class="case-study-visual">B4</div>
-                    <div class="case-study-content">
-                        <div class="case-study-header">Big Four Accounting Firm</div>
-                        <h3>Automating Reconciliation for a Big Four Tax Firm </h3>
-                        <p class="highlight">A leading accounting firm's 20-person asset management tax team spent 20% of its time fixing errors from an Alteryx reconciliation workflow, resulting in over $1M in wasted labor each year.</p>
-                        <p>We partnered with their tax team to build an Excel AI add-in that acts like a financial spell-check, surfacing discrepancies and recommending fixes in real time. What once took over an hour of manual review is now a 5-minute verification, freeing accountants to process more funds each day with higher accuracy.</p>
-                        <ul class="case-results">
-                            <li>⏱️ 60min → 5min review time</li>
-                            <li>💰 $1M+ annual savings</li>
-                            <li>📈 20% capacity increase</li>
-                        </ul>
-                        <a href="#" class="case-study-cta">Read Case Study →</a>
-                    </div>
-                </div>
-
-                <!-- CASE STUDY 2: Document Intelligence -->
-                <div class="case-study-box">
-                    <div class="case-study-visual alt-1">FS</div>
-                    <div class="case-study-content">
-                        <div class="case-study-header">Global Financial Services Firm</div>
-                        <h3>Transforming document chaos into structured intelligence</h3>
-                        <p class="highlight">A Fortune 500 financial services firm was drowning in unstructured documents—tax forms, financial statements, legal contracts—with 15 offshore analysts struggling to keep pace with growing volumes.</p>
-                        <p>We deployed an AI system that reads like their best analyst but works 24/7. The platform extracts data from complex tables, interprets handwritten notes, and validates information across multiple sources. Within weeks, the firm eliminated their entire document backlog and reassigned analysts to higher-value client work.</p>
-                        <ul class="case-results">
-                            <li>🎯 99.8% extraction accuracy</li>
-                            <li>⚡ Same-day form support</li>
-                            <li>👥 15 FTEs redeployed</li>
-                        </ul>
-                        <a href="#" class="case-study-cta">Read Case Study →</a>
-                    </div>
-                </div>
-
-                <!-- CASE STUDY 3: Wealth Management -->
-                <div class="case-study-box">
-                    <div class="case-study-visual alt-2">WM</div>
-                    <div class="case-study-content">
-                        <div class="case-study-header">Wealth Management Platform</div>
-                        <h3>From 2-week onboarding bottlenecks to same-day client activation</h3>
-                        <p class="highlight">A rapidly growing wealth management platform was losing deals due to slow client onboarding—their BPO provider took 2 weeks to process new fund documentation, creating friction right at the moment of highest client enthusiasm.</p>
-                        <p>We built an AI agent that understands fund structures, regulatory requirements, and compliance rules as deeply as their best ops team. The system processes prospectuses, validates investor information, and flags edge cases for review—all within hours instead of weeks. They've since eliminated their BPO dependency entirely.</p>
-                        <ul class="case-results">
-                            <li>📅 14 days → same-day processing</li>
-                            <li>✅ Higher accuracy than manual review</li>
-                            <li>🚀 50% reduction in drop-offs</li>
-                        </ul>
-                        <a href="#" class="case-study-cta">Read Case Study →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Secure, Flexible AI Infrastructure</h2>
             <p class="lead">
                 Our platform enables us to rapidly deploy AI for precise workflows across the organization, composing AI modules that understand and reason over enterprise data and systems, including PDFs, Excel sheets, Alteryx workflows, and ERP systems.
             </p>
