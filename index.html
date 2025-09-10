@@ -84,6 +84,105 @@
             padding: 56px 20px 20px
         }
 
+        /* Manifesto Section */
+        .manifesto-section {
+            background: #000;
+            color: #fff;
+            padding: 120px 20px;
+            margin-top: -1px;
+        }
+
+        .manifesto-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .manifesto-label {
+            color: #888;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        .manifesto-headline {
+            font-size: 3.5rem;
+            line-height: 1.15;
+            font-weight: 600;
+            margin-bottom: 60px;
+            letter-spacing: -0.02em;
+        }
+
+        .manifesto-question {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .manifesto-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        .manifesto-text strong {
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .manifesto-buttons {
+            margin-top: 50px;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .manifesto-btn {
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .manifesto-btn-primary {
+            background: #fff;
+            color: #000;
+            border: none;
+        }
+
+        .manifesto-btn-primary:hover {
+            background: #f0f0f0;
+            text-decoration: none;
+        }
+
+        .manifesto-btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .manifesto-btn-secondary:hover {
+            border-color: rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.05);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .manifesto-headline {
+                font-size: 2.2rem;
+            }
+            
+            .manifesto-section {
+                padding: 80px 20px;
+            }
+        }
+
         .kicker {
             color: var(--muted);
             font-size: .9rem;
@@ -706,12 +805,35 @@
         </div>
     </nav>
 
-    <header class="hero" id="top">
-        <h1>We build AI that helps leading firms deliver better, faster outcomes.</h1> 
-    </header>
+    <!-- Manifesto Section -->
+    <section class="manifesto-section">
+        <div class="manifesto-container">
+            <div class="manifesto-label">MANIFESTO</div>
+            
+            <h1 class="manifesto-headline">
+                A new approach to<br>
+                enterprise AI automation.
+            </h1>
+            
+            <div class="manifesto-question">Why hasn't AI changed the world yet?</div>
+            
+            <p class="manifesto-text">
+                AI is already capable of automating tax preparation, medical billing, financial reporting, insurance underwriting, regulatory reporting, clinical documentation, and much of mundane professional work. Enterprises are investing billions.
+            </p>
+            
+            <p class="manifesto-text">
+                The bitter lesson: forcing professionals to learn new "AI tools" produces only surface-level gains. Real transformation happens when great engineers work <strong>alongside</strong> domain experts to build AI that disappears into the workflow—delivering faster, more accurate outcomes.
+            </p>
+            
+            <div class="manifesto-buttons">
+                <a href="#contact" class="manifesto-btn manifesto-btn-primary">Talk to an engineer</a>
+                <a href="#case-studies" class="manifesto-btn manifesto-btn-secondary">See proof</a>
+            </div>
+        </div>
+    </section>
 
     <main>
-        <section style="margin-top: 0px;">
+        <section style="margin-top: 80px;" id="case-studies">
             <h2>Case Studies</h2>
             <div class="case-studies-grid">
                 <!-- CASE STUDY 1: Tax Compliance -->
