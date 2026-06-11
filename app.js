@@ -9,15 +9,19 @@
 
   /* ---------- hero slideshow: famous American architecture ---------- */
 
-  /* focus: object-position x — keeps each clip's subject centered in the
-     right-hand panel, which crops the 16:9 frame horizontally */
+  /* focus: object-position — keeps each clip's subject centered in the
+     right-hand panel, which crops landscape frames horizontally and
+     portrait frames vertically */
   var CLIPS = [
-    { src: "assets/video/towers.mp4",     focus: "4%",  caption: "Empire State Building — New York, NY",          coords: "40.7484° N, 73.9857° W" },
-    { src: "assets/video/capitol.mp4",    focus: "0%",  caption: "United States Capitol — Washington, D.C.",      coords: "38.8899° N, 77.0091° W" },
-    { src: "assets/video/brooklyn.mp4",   focus: "12%", caption: "Brooklyn Bridge, est. 1883 — New York, NY",     coords: "40.7061° N, 73.9969° W" },
-    { src: "assets/video/chicago.mp4",    focus: "50%", caption: "Near North Side — Chicago, IL",                 coords: "41.8989° N, 87.6229° W" },
-    { src: "assets/video/goldengate.mp4", focus: "50%", caption: "Golden Gate Bridge, est. 1937 — San Francisco, CA", coords: "37.8199° N, 122.4783° W" },
-    { src: "assets/video/nyc_drone.mp4",  focus: "10%", caption: "Hudson Yards — New York, NY",                   coords: "40.7540° N, 74.0014° W" }
+    { src: "assets/video/towers.mp4",      focus: "4% 50%",  caption: "Empire State Building — New York, NY",          coords: "40.7484° N, 73.9857° W" },
+    { src: "assets/video/wrigley.mp4",     focus: "50% 40%", caption: "Wrigley Building, est. 1924 — Chicago, IL",     coords: "41.8893° N, 87.6245° W" },
+    { src: "assets/video/capitol.mp4",     focus: "0% 50%",  caption: "United States Capitol — Washington, D.C.",      coords: "38.8899° N, 77.0091° W" },
+    { src: "assets/video/tribune.mp4",     focus: "50% 30%", caption: "Tribune Tower, est. 1925 — Chicago, IL",        coords: "41.8903° N, 87.6235° W" },
+    { src: "assets/video/brooklyn.mp4",    focus: "12% 50%", caption: "Brooklyn Bridge, est. 1883 — New York, NY",     coords: "40.7061° N, 73.9969° W" },
+    { src: "assets/video/rockefeller.mp4", focus: "50% 45%", caption: "30 Rockefeller Plaza — New York, NY",           coords: "40.7587° N, 73.9787° W" },
+    { src: "assets/video/chicago.mp4",     focus: "50% 50%", caption: "Near North Side — Chicago, IL",                 coords: "41.8989° N, 87.6229° W" },
+    { src: "assets/video/goldengate.mp4",  focus: "50% 50%", caption: "Golden Gate Bridge, est. 1937 — San Francisco, CA", coords: "37.8199° N, 122.4783° W" },
+    { src: "assets/video/nyc_drone.mp4",   focus: "10% 50%", caption: "Hudson Yards — New York, NY",                   coords: "40.7540° N, 74.0014° W" }
   ];
 
   var HOLD_MS = 9000;
@@ -55,7 +59,7 @@
 
     function stage(v, i) {
       v.src = CLIPS[i].src;
-      v.style.objectPosition = CLIPS[i].focus + " 50%";
+      v.style.objectPosition = CLIPS[i].focus;
     }
 
     // boot: first clip on the front layer, preload second on the back
