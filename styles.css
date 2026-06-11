@@ -185,27 +185,17 @@ a { color: inherit; }
 .prov-logos img[alt="Amazon Web Services"] { height: 30px; }
 .prov-logos img[alt*="Berkeley"] { height: 30px; }
 
-/* --- architectural register (bottom strip) --- */
+/* --- architectural register (bottom-right, under the footage) --- */
 .hero-register {
-  position: relative; z-index: 2;
-  margin-top: auto;
-  display: flex; align-items: baseline; gap: 24px;
-  padding: 18px var(--gutter) 22px;
-  border-top: 1px solid var(--hair-lt);
-  color: rgba(242,239,231,.62);
+  position: absolute; z-index: 2;
+  right: var(--gutter); bottom: 22px;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 7px;
+  text-align: right;
+  color: rgba(242,239,231,.7);
 }
 .reg-caption { letter-spacing: .12em; transition: opacity .5s ease; }
-.reg-meta { margin-left: auto; display: flex; gap: 28px; letter-spacing: .12em; }
+.reg-meta { display: flex; gap: 28px; letter-spacing: .12em; color: rgba(242,239,231,.5); }
 .reg-index b { font-weight: 500; color: rgba(242,239,231,.95); }
-.reg-bar {
-  position: absolute; left: 0; top: -1px; height: 1px; width: 100%;
-  background: transparent;
-}
-.reg-bar i {
-  display: block; height: 1px; width: 0%;
-  background: rgba(242,239,231,.85);
-  transition: width .3s linear;
-}
 
 /* ============================================================
    THESIS
