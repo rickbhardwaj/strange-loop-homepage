@@ -183,7 +183,8 @@ a { color: inherit; }
   opacity: .85;
 }
 .prov-logos img[alt="Amazon Web Services"] { height: 30px; }
-.prov-logos img[alt*="Berkeley"] { height: 30px; }
+.prov-logos img[alt="Google"] { height: 24px; }
+.prov-logos img[alt="Amazon Alexa"] { height: 34px; }
 
 /* --- architectural register (bottom-right, under the footage) --- */
 .hero-register {

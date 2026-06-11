@@ -14,11 +14,11 @@
      portrait frames vertically */
   var CLIPS = [
     { src: "assets/video/wrigley.mp4",     focus: "50% 40%", caption: "Wrigley Building, est. 1924 — Chicago, IL",     coords: "41.8893° N, 87.6245° W" },
+    { src: "assets/video/radiator.mp4",        focus: "46% 35%", caption: "American Radiator Building, est. 1924 — New York, NY",   coords: "40.7527° N, 73.9831° W" },
     { src: "assets/video/tribune.mp4",     focus: "50% 30%", caption: "Tribune Tower, est. 1925 — Chicago, IL",        coords: "41.8903° N, 87.6235° W" },
     { src: "assets/video/rockefeller.mp4", focus: "50% 45%", caption: "30 Rockefeller Plaza — New York, NY",           coords: "40.7587° N, 73.9787° W" },
     { src: "assets/video/dallascityhall.mp4",  focus: "50% 45%", caption: "Dallas City Hall, est. 1978 — Dallas, TX",      coords: "32.7763° N, 96.7969° W" },
-    { src: "assets/video/easterncolumbia.mp4", focus: "46% 40%", caption: "Eastern Columbia Building, est. 1930 — Los Angeles, CA", coords: "34.0407° N, 118.2563° W" },
-    { src: "assets/video/radiator.mp4",        focus: "46% 35%", caption: "American Radiator Building, est. 1924 — New York, NY",   coords: "40.7527° N, 73.9831° W" }
+    { src: "assets/video/easterncolumbia.mp4", focus: "46% 40%", caption: "Eastern Columbia Building, est. 1930 — Los Angeles, CA", coords: "34.0407° N, 118.2563° W" }
   ];
 
   var HOLD_MS = 9000;

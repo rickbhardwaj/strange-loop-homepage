@@ -52,7 +52,7 @@ at the top of `app.js`.
 
 ## Notes
 
-- Client/institution logos (PwC, KKR, Amazon Alexa, AWS, UC Berkeley) are the
+- Client/institution logos (PwC, KKR, Amazon Alexa, AWS, Google) are the
   property of their respective owners.
 - `prefers-reduced-motion` is respected: videos are replaced with a static poster
   and reveal animations are disabled.
