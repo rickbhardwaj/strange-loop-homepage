@@ -9,13 +9,15 @@
 
   /* ---------- hero slideshow: famous American architecture ---------- */
 
+  /* focus: object-position x — keeps each clip's subject centered in the
+     right-hand panel, which crops the 16:9 frame horizontally */
   var CLIPS = [
-    { src: "assets/video/towers.mp4",     caption: "Empire State Building — New York, NY",          coords: "40.7484° N, 73.9857° W" },
-    { src: "assets/video/capitol.mp4",    caption: "United States Capitol — Washington, D.C.",      coords: "38.8899° N, 77.0091° W" },
-    { src: "assets/video/brooklyn.mp4",   caption: "Brooklyn Bridge, est. 1883 — New York, NY",     coords: "40.7061° N, 73.9969° W" },
-    { src: "assets/video/chicago.mp4",    caption: "Near North Side — Chicago, IL",                 coords: "41.8989° N, 87.6229° W" },
-    { src: "assets/video/goldengate.mp4", caption: "Golden Gate Bridge, est. 1937 — San Francisco, CA", coords: "37.8199° N, 122.4783° W" },
-    { src: "assets/video/nyc_drone.mp4",  caption: "Hudson Yards — New York, NY",                   coords: "40.7540° N, 74.0014° W" }
+    { src: "assets/video/towers.mp4",     focus: "4%",  caption: "Empire State Building — New York, NY",          coords: "40.7484° N, 73.9857° W" },
+    { src: "assets/video/capitol.mp4",    focus: "0%",  caption: "United States Capitol — Washington, D.C.",      coords: "38.8899° N, 77.0091° W" },
+    { src: "assets/video/brooklyn.mp4",   focus: "12%", caption: "Brooklyn Bridge, est. 1883 — New York, NY",     coords: "40.7061° N, 73.9969° W" },
+    { src: "assets/video/chicago.mp4",    focus: "50%", caption: "Near North Side — Chicago, IL",                 coords: "41.8989° N, 87.6229° W" },
+    { src: "assets/video/goldengate.mp4", focus: "50%", caption: "Golden Gate Bridge, est. 1937 — San Francisco, CA", coords: "37.8199° N, 122.4783° W" },
+    { src: "assets/video/nyc_drone.mp4",  focus: "10%", caption: "Hudson Yards — New York, NY",                   coords: "40.7540° N, 74.0014° W" }
   ];
 
   var HOLD_MS = 9000;
@@ -51,10 +53,15 @@
       if (p && p.catch) p.catch(function () { /* autoplay blocked; poster remains */ });
     }
 
+    function stage(v, i) {
+      v.src = CLIPS[i].src;
+      v.style.objectPosition = CLIPS[i].focus + " 50%";
+    }
+
     // boot: first clip on the front layer, preload second on the back
-    front.src = CLIPS[0].src;
+    stage(front, 0);
     play(front);
-    back.src = CLIPS[1].src;
+    stage(back, 1);
     back.load();
     setRegister(0);
     holdStart = performance.now();
@@ -72,7 +79,7 @@
       var t = front; front = back; back = t;
       setTimeout(function () {
         back.pause();
-        back.src = CLIPS[(idx + 1) % CLIPS.length].src;
+        stage(back, (idx + 1) % CLIPS.length);
         back.load();
       }, 1700);
 

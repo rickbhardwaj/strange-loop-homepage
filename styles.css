@@ -116,7 +116,7 @@ a { color: inherit; }
 .hero-media { position: absolute; inset: 0; }
 .hero-video {
   position: absolute; top: 0; right: 0; height: 100%;
-  left: 34%; width: 66%; object-fit: cover;
+  left: 42%; width: 58%; object-fit: cover;
   opacity: 0; transition: opacity 1.6s ease;
   filter: grayscale(.3) contrast(1.06) brightness(.9) sepia(.08);
   transform: scale(1.02);
@@ -126,7 +126,7 @@ a { color: inherit; }
 .hero-scrim {
   position: absolute; inset: 0;
   background:
-    linear-gradient(90deg, #090B0D 0%, #090B0D 36%, rgba(9,11,13,.78) 46%, rgba(9,11,13,.32) 60%, rgba(9,11,13,.1) 74%, rgba(9,11,13,.3) 100%),
+    linear-gradient(90deg, #090B0D 0%, #090B0D 44%, rgba(9,11,13,.78) 53%, rgba(9,11,13,.32) 66%, rgba(9,11,13,.1) 78%, rgba(9,11,13,.3) 100%),
     linear-gradient(180deg, rgba(9,11,13,.55) 0%, rgba(9,11,13,0) 28%, rgba(9,11,13,0) 66%, rgba(9,11,13,.72) 100%);
 }
 .hero-scrim::after {
